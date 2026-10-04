@@ -71,12 +71,34 @@ img { max-width: 100%; }
 .hero {
   position: relative; overflow: hidden;
   color: var(--white);
-  background: linear-gradient(180deg, #0b3954 0%, #11597a 45%, #1f7a8c 75%, #3fa7a3 100%);
-  padding: clamp(5rem, 12vw, 9rem) 0 clamp(8rem, 14vw, 11rem);
+  /* Phones/tablets: the full banner sits on top and fades into the navy text area. */
+  --banner-h: calc(100vw * 940 / 1672);
+  background:
+    linear-gradient(180deg, rgba(11,57,84,0) 55%, #0b3954 100%) top center / 100% var(--banner-h) no-repeat,
+    url("assets/decklife-banner.webp") top center / 100% auto no-repeat,
+    linear-gradient(180deg, #0b3954 0%, #11597a 45%, #1f7a8c 75%, #3fa7a3 100%);
+  padding: calc(var(--banner-h) + 1rem) 0 clamp(7rem, 14vw, 10rem);
 }
-.hero-inner { position: relative; display: grid; grid-template-columns: 1fr 1.05fr; gap: 3rem; align-items: center; }
-.hero-photo { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.35); border: 4px solid rgba(255,255,255,.85); }
-.hero-photo img { display: block; width: 100%; height: auto; }
+.hero-inner { position: relative; }
+.hero-copy { max-width: 640px; }
+@media (min-width: 1100px) {
+  /* Wide screens: banner fills the whole hero; a dark fade on the left keeps the text readable
+     and stops before the logo on the right side of the photo. */
+  .hero {
+    min-height: min(calc(100vw * 940 / 1672), 860px);
+    display: flex; align-items: center;
+    background:
+      linear-gradient(90deg, rgba(7,42,63,.95) 0%, rgba(7,42,63,.85) 28%, rgba(7,42,63,.35) 44%, rgba(7,42,63,0) 54%),
+      url("assets/decklife-banner.webp") right top / cover no-repeat,
+      #0b3954;
+    padding: 3.5rem 0 6.5rem;
+  }
+  .hero-inner { width: 100%; }
+  .hero-copy { max-width: 460px; }
+  .hero h1 { font-size: clamp(2.6rem, 3.4vw, 3.9rem); }
+  .hero .lead { font-size: 1.08rem; }
+  .hero-actions { margin-top: 1.5rem; }
+}
 .eyebrow {
   display: inline-block; margin: 0 0 1.25rem;
   padding: .35em .9em; border-radius: 999px;
@@ -252,8 +274,6 @@ img { max-width: 100%; }
 .mobile-cta { display: none; }
 
 @media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-photo { order: -1; }
   .highlight-grid { grid-template-columns: 1fr 1fr; }
   .highlight-grid > div:nth-child(3) { border-left: 0; }
   .highlight-grid > div:nth-child(n+3) { border-top: 1px solid rgba(11,57,84,.08); }
@@ -262,6 +282,19 @@ img { max-width: 100%; }
   .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 180px; }
   .g-wide, .g-half { grid-column: span 2; }
   .book, .contact { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none; position: absolute; top: 68px; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--white); border-bottom: 1px solid rgba(11,57,84,.1);
+    padding: .5rem 16px 1rem; box-shadow: var(--shadow);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a:not(.btn) { padding: .8rem 0; border-bottom: 1px solid rgba(11,57,84,.06); }
+  .nav-links .btn { margin-top: .8rem; }
 }
 
 @media (max-width: 760px) {
