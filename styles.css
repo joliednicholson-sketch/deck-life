@@ -60,8 +60,7 @@ img { max-width: 100%; }
 }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
-.brand-text { font-family: "DM Serif Display", serif; font-size: 1.35rem; color: var(--navy); }
-.brand-text span { color: var(--sea); }
+.brand .logo { height: 46px; width: auto; display: block; }
 .nav-links { display: flex; align-items: center; gap: 1.75rem; }
 .nav-links a:not(.btn) { text-decoration: none; color: var(--ink); font-weight: 700; }
 .nav-links a:not(.btn):hover { color: var(--sea); }
@@ -92,6 +91,7 @@ img { max-width: 100%; }
 .hero h1 { font-size: clamp(2.6rem, 7vw, 4.75rem); }
 .hero h1 em { font-style: italic; color: var(--sun); }
 .lead { font-size: clamp(1.05rem, 2vw, 1.2rem); opacity: .93; }
+.lead strong { color: var(--white); font-weight: 800; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
 
 .waves { position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(70px, 10vw, 150px); }
@@ -250,8 +250,7 @@ img { max-width: 100%; }
 .footer-wave { position: absolute; top: -1px; left: 0; width: 100%; height: 60px; }
 .footer-wave path { fill: var(--white); }
 .footer-inner { display: grid; justify-items: center; gap: .3rem; }
-.brand-footer .brand-text { color: var(--white); }
-.brand-footer .brand-text span { color: var(--seafoam); }
+.brand-footer .logo { height: 64px; margin-bottom: .4rem; }
 .site-footer a { color: var(--seafoam); text-decoration: none; }
 .fine { font-size: .85rem; opacity: .7; }
 

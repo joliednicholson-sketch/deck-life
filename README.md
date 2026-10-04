@@ -1,6 +1,6 @@
-# Deck Life Service website
+# DeckLife website
 
-Static website for **decklifeservice.com**, the site for Deck Life Service LLC, a boat decking company in Wilmington, NC. It's plain HTML and CSS, so there's no build step.
+Static website for **decklifeservice.com**, the site for DeckLife (Deck Life Service LLC), a boat decking company in Wilmington, NC. It's plain HTML and CSS, so there's no build step.
 
 ## Files
 
