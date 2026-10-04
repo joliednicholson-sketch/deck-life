@@ -14,7 +14,7 @@ Static website for **decklifeservice.com**, the site for Deck Life Service LLC, 
 
 Search `index.html` for these:
 
-- `info@decklifeservice.com`: your email (change it if you use a different address)
+- `matt@decklifeservice.com`: your email (change it if you use a different address)
 - `YOUR_FORM_ID`: create a free form at https://formspree.io and paste its ID so booking requests go to your inbox
 - Gallery: photos live in `assets/gallery/`. To add one, copy a `<figure class="g …">` block in the gallery section and point it at the new file
 - Hours (`Mon–Sat, 8am–5pm`) and the services and materials lists, if they differ from what you offer
