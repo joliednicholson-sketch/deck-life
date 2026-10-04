@@ -1,6 +1,6 @@
 # Deck Life Service website
 
-Static website for **decklifeservice.com**. It's plain HTML and CSS, so there's no build step.
+Static website for **decklifeservice.com**, the site for Deck Life Service LLC, a boat decking company in Wilmington, NC. It's plain HTML and CSS, so there's no build step.
 
 ## Files
 
@@ -14,12 +14,13 @@ Static website for **decklifeservice.com**. It's plain HTML and CSS, so there's 
 
 Search `index.html` for these:
 
-- `(555) 555-5555` / `+15555555555`: your phone number
-- `info@decklifeservice.com`: your email
-- `[YOUR CITY]` / `YOUR CITY, ST`: your service area
-- `[Tell your story here…]`: the About section
-- `YOUR_FORM_ID`: create a free form at https://formspree.io and paste its ID so estimate requests go to your inbox
-- Gallery: put photos in `assets/` and replace each `<figure class="ph">` with `<img src="assets/photo1.jpg" alt="Restored cedar deck">`
+- `(555) 555-5555` / `+15555555555` / `+1-555-555-5555`: your phone number
+- `info@decklifeservice.com`: your email (change it if you use a different address)
+- `YOUR_FORM_ID`: create a free form at https://formspree.io and paste its ID so booking requests go to your inbox
+- Gallery: put boat photos in `assets/` and replace each `<figure class="ph …">` with `<img src="assets/boat1.jpg" alt="Faux-teak EVA decking on a center console">`
+- Hours (`Mon–Sat, 8am–5pm`) and the services and materials lists, if they differ from what you offer
+
+If you'd rather have customers pick an exact time slot, the booking form can be swapped for a Calendly (or similar) embed.
 
 ## Going live
 
