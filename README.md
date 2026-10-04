@@ -14,10 +14,9 @@ Static website for **decklifeservice.com**, the site for Deck Life Service LLC, 
 
 Search `index.html` for these:
 
-- `(555) 555-5555` / `+15555555555` / `+1-555-555-5555`: your phone number
 - `info@decklifeservice.com`: your email (change it if you use a different address)
 - `YOUR_FORM_ID`: create a free form at https://formspree.io and paste its ID so booking requests go to your inbox
-- Gallery: put boat photos in `assets/` and replace each `<figure class="ph …">` with `<img src="assets/boat1.jpg" alt="Faux-teak EVA decking on a center console">`
+- Gallery: photos live in `assets/gallery/`. To add one, copy a `<figure class="g …">` block in the gallery section and point it at the new file
 - Hours (`Mon–Sat, 8am–5pm`) and the services and materials lists, if they differ from what you offer
 
 If you'd rather have customers pick an exact time slot, the booking form can be swapped for a Calendly (or similar) embed.
