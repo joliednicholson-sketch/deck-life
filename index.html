@@ -464,6 +464,11 @@
     const d = new Date();
     document.getElementById('book-date').min =
       `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    // Show the floating button only once the hero's own buttons have scrolled away.
+    const cta = document.querySelector('.mobile-cta');
+    const onScroll = () => cta.classList.toggle('show', window.scrollY > window.innerHeight * 0.8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   </script>
 </body>
 </html>
